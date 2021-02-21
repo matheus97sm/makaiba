@@ -1,5 +1,5 @@
 {
-  "name": "name_here",
+  "name": "makaiba",
   "version": "1.0.0",
   "description": "Para começar a realizar qualquer tipo de ação no tema, leia as instruções README.md",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matheussalt/name_here.git"
+    "url": "git+https://github.com/matheus97sm/makaiba.git"
   },
   "author": "Matheus Fonseca",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/matheussalt/name_here/issues"
+    "url": "https://github.com/matheus97sm/makaiba/issues"
   },
-  "homepage": "https://github.com/matheussalt/name_here#readme",
+  "homepage": "https://github.com/matheus97sm/makaiba#readme",
   "dependencies": {
     "@babel/core": "^7.5.4",
     "@babel/polyfill": "^7.8.7",

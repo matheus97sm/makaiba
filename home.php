@@ -3,8 +3,8 @@
  * Template Name: home
  *
  * @package WordPress
- * @subpackage agenciaSalt
- * @since agenciaSalt
+ * @subpackage makaiba
+ * @since makaiba
  */
 get_header(); ?>
 
