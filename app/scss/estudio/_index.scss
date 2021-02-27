@@ -1,0 +1,28 @@
+.estudio-banner {
+  width: 100%;
+  height: calc(100vh - 104px);
+  padding-bottom: 96px;
+  background-color: #f6f6f6;
+
+  .container {
+    height: 100%;
+    padding-right: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 128px;
+
+    .fruta {
+      width: 200px;
+    }
+
+    .logo {
+      width: 400px;
+    }
+  }
+}
+
+@import './estudio';
+@import './equipe';
+@import './clientes';
+@import './maps';

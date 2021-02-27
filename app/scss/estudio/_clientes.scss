@@ -1,0 +1,65 @@
+.estudio-clientes {
+  width: 100%;
+  padding: 256px 0 128px;
+  background-color: #f6f6f6;
+
+  .container {
+    padding: 0 128px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 64px;
+  }
+}
+
+.estudio-clientes-title {
+  position: relative;
+
+  .line {
+    position: absolute;
+    bottom: calc(100% + 32px);
+    left: 0;
+    width: 2px;
+    height: 128px;
+    background-color: $yellow;
+  }
+
+  strong {
+    position: relative;
+    display: block;
+    text-transform: lowercase;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  h2 {
+    margin: 0;
+    color: $black;
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: lowercase;
+  }
+}
+
+.estudio-clientes-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+
+  .estudio-clientes-item {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    filter: grayscale(1);
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+}

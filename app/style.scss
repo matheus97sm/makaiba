@@ -1,9 +1,13 @@
+$yellow: #ffc629;
+$black: #2d2a26;
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   outline: none;
   -webkit-font-smoothing: antialiased;
+  font-family: 'Dosis', sans-serif;
 }
 
 ul,
@@ -16,6 +20,23 @@ a {
   text-decoration: none;
 }
 
+p,
+li,
+a,
+span {
+  color: $black;
+  line-height: 1.5rem;
+}
+
+.container {
+  max-width: 1050px;
+  width: 90%;
+  margin: 0 auto;
+}
+
 @import './scss/header/header';
+@import './scss/home';
+@import './scss/projetos';
+@import './scss/estudio';
 @import './scss/footer/footer';
 @import './animation';

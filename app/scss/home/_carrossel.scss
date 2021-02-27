@@ -1,0 +1,239 @@
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.banner-item {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 90%;
+  max-width: 960px;
+  visibility: hidden;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 1;
+
+  &.ativo {
+    visibility: visible;
+
+    .line {
+      animation: lineDown 2s forwards;
+    }
+
+    .category,
+    h3,
+    a {
+      animation: enterText 2s forwards;
+      animation-delay: 1s;
+    }
+
+    h3 {
+      animation-delay: 1.5s;
+    }
+
+    a {
+      animation-delay: 2s;
+    }
+  }
+
+  &.inativo {
+    visibility: hidden;
+    transition: visibility 0s;
+    transition-delay: 4s;
+
+    .line {
+      height: 96px;
+      animation: lineUp 2s forwards;
+      animation-delay: 1s;
+    }
+
+    .category,
+    h3,
+    a {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      animation: exitText 1s forwards;
+      animation-delay: 1s;
+    }
+
+    h3 {
+      animation-delay: 0.5s;
+    }
+
+    a {
+      animation-delay: 0s;
+    }
+  }
+
+  .line {
+    position: absolute;
+    top: -118px;
+    left: 0;
+    display: block;
+    width: 2px;
+    height: 0;
+    background-color: $yellow;
+  }
+
+  .category {
+    position: relative;
+    display: block;
+    transform: translate3d(-32px, 0, 0);
+    opacity: 0;
+    color: #fff;
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  h3 {
+    margin: 0px 0 96px;
+    transform: translate3d(-32px, 0, 0);
+    opacity: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 76px;
+    text-transform: lowercase;
+  }
+
+  a {
+    padding: 6px 24px;
+    display: inline-block;
+    background-color: $yellow;
+    border: 2px solid $yellow;
+    border-radius: 32px;
+    transform: translate3d(-32px, 0, 0);
+    opacity: 0;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: transparent;
+      color: $yellow;
+    }
+  }
+}
+
+.banner-item-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: -1;
+
+  &.ativo {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: opacity 1s, transform 10s;
+    transition-timing-function: ease-out;
+  }
+
+  &.inativo {
+    transform: scale(1.1);
+    opacity: 0;
+    transition: opacity 2s, transform 10s;
+    transition-timing-function: ease-out;
+    transition-delay: opacity 2s;
+  }
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 16px;
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: background-color 0.3s ease-out;
+    cursor: pointer;
+
+    &:hover,
+    &.ativo {
+      background-color: $yellow;
+    }
+  }
+}
+
+@keyframes lineDown {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 96px;
+  }
+}
+
+@keyframes lineUp {
+  0% {
+    height: 96px;
+  }
+
+  50%,
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes enterText {
+  0% {
+    opacity: 0;
+    transform: translate3d(-32px, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes exitText {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-32px, 0, 0);
+  }
+}
+
+@keyframes enterImg {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes exitImg {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,30 @@
+.projeto {
+  width: 100%;
+  background-color: #f6f6f5;
+}
+
+.projeto-img {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background-image: linear-gradient(to top, #000, #00000000);
+    opacity: 0.6;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@import './content';
+@import './gallery';
