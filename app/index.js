@@ -7,4 +7,5 @@ import gallery from './js/gallery';
 import './js/modernizr';
 
 carrossel();
+animacoes();
 gallery();

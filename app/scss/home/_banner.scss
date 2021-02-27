@@ -17,6 +17,28 @@
   z-index: 9;
 }
 
+.banner-midias {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  a {
+    padding: 4px;
+
+    &:hover {
+      svg {
+        fill: $yellow;
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: #fff;
+    }
+  }
+}
+
 .banner-filter {
   position: absolute;
   top: 0;

@@ -20,21 +20,21 @@
   <div class="container">
     <div class="projeto-content">
       <div class="projeto-dados">
-        <span class="line"></span>
+        <span class="line" data-animar></span>
         <?php 
         $categories = get_the_category(get_the_ID());
         foreach($categories as $category) { ?>
-        <span class="category"><?=$category->name?></span>
+        <span class="category fadeUp" data-animar><?=$category->name?></span>
         <?php } ?>
 
-        <h1><?=the_title()?></h1>
+        <h1 class="fadeUp" data-animar><?=the_title()?></h1>
 
-        <div>
+        <div class="fadeUp" data-animar>
           <?=the_field('dados')?>
         </div>
       </div>
 
-      <div class="projeto-descricao">
+      <div class="projeto-descricao fadeUp" data-animar>
         <?=the_content()?>
       </div>
     </div>

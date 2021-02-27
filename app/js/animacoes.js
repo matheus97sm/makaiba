@@ -2,9 +2,6 @@ export default function animacoes() {
   const animaItem = document.querySelectorAll("[data-animar]");
 
   animaItem.forEach(item => {
-    if (item.getBoundingClientRect().top < window.innerHeight)
-      return item.classList.add("animar");
-
     window.addEventListener("scroll", e => {
       const distTop = window.innerHeight * 0.85;
 

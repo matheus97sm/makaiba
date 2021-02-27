@@ -10,20 +10,20 @@ get_header(); ?>
 
 <section class="estudio-banner">
   <div class="container">
-    <img src="<?=get_template_directory_URI()?>/img/src/fruta.png" alt="Makaíba" class="fruta" />
-    <img src="<?=get_template_directory_URI()?>/img/src/logo.svg" alt="Makaíba" class="logo" />
+    <img src="<?=get_template_directory_URI()?>/img/src/fruta.png" alt="Makaíba" class="fruta" data-anima-tempo />
+    <img src="<?=get_template_directory_URI()?>/img/src/logo.svg" alt="Makaíba" class="logo" data-anima-tempo />
   </div>
 </section>
 
 <section class="estudio-sobre">
   <div class="container">
     <div class="estudio-sobre-title">
-      <span class="line"></span>
-      <h1>estúdio</h1>
-      <strong>arquitetura e urbanismo</strong>
+      <span class="line" data-animar></span>
+      <h1 class="fadeUp" data-animar>estúdio</h1>
+      <strong class="fadeUp" data-animar>arquitetura e urbanismo</strong>
     </div>
 
-    <div class="estudio-sobre-content">
+    <div class="estudio-sobre-content fadeUp" data-animar>
       <?=the_content()?>
     </div>
   </div>
@@ -34,7 +34,7 @@ get_header(); ?>
     <?php query_posts( array( 'post_type' => 'equipe', 'posts_per_page' => '3', 'orderby' => 'title', 'order' => 'ASC' ) );  ?>
     <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
-    <div class="estudio-equipe-item">
+    <div class="estudio-equipe-item fadeUp" data-animar>
       <div class="estudio-equipe-item-img">
         <img src="<?=catch_that_image(1)?>" alt="<?=the_title()?>" />
       </div>
