@@ -83,3 +83,19 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 16px;
+
+    a {
+      text-align: center;
+    }
+  }
+}

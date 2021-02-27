@@ -48,3 +48,13 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .estudio-equipe {
+    .container {
+      padding: 0 16px 64px 64px;
+      grid-template-columns: 1fr;
+      gap: 64px;
+    }
+  }
+}

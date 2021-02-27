@@ -38,6 +38,23 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .estudio-banner .container {
+    padding-right: 0;
+    flex-direction: column;
+    gap: 64px;
+
+    .fruta {
+      width: 140px;
+      transform: translate3d(30%, 0, 0);
+    }
+
+    .logo {
+      width: 80%;
+    }
+  }
+}
+
 @import './estudio';
 @import './equipe';
 @import './clientes';

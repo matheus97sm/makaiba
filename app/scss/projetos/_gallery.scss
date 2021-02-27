@@ -91,5 +91,19 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .projeto-gallery-img {
+    height: 48vw;
+  }
+
+  .projeto-gallery-txt-item {
+    width: 100%;
+  }
+
+  .projeto-gallery-txt {
+    padding: 64px 0 64px 32px;
+  }
+}
+
 @import './grid';
 @import './controls';

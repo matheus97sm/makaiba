@@ -68,3 +68,33 @@
     object-fit: cover;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .projeto-outside {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-card {
+    .projeto-card-dados {
+      .category,
+      .year {
+        font-size: 16px;
+      }
+
+      h3 {
+        margin: -4px 0 8px;
+        font-size: 36px;
+        line-height: 42px;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

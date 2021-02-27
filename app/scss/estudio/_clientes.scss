@@ -63,3 +63,21 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .estudio-clientes {
+    padding: 128px 0;
+
+    .container {
+      padding: 0;
+      padding-left: 32px;
+      grid-template-columns: 1fr;
+      gap: 64px;
+    }
+  }
+
+  .estudio-clientes-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}

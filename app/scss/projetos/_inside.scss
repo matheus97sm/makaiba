@@ -26,5 +26,11 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .projeto-img {
+    height: calc(100vh - 104px);
+  }
+}
+
 @import './content';
 @import './gallery';

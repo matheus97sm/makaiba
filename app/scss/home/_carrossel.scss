@@ -167,6 +167,15 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .banner-item {
+    h3 {
+      margin: 0px 0 32px;
+      font-size: 68px;
+    }
+  }
+}
+
 @keyframes lineDown {
   0% {
     height: 0;

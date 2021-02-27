@@ -74,3 +74,11 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .estudio-sobre .container {
+    padding: 0;
+    padding-left: 32px;
+    grid-template-columns: 1fr;
+  }
+}
