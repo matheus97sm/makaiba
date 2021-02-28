@@ -13,7 +13,7 @@
 <? if (is_single()) { ?>
 
 <section class="projeto">
-  <div class="projeto-img">
+  <div class="projeto-img" data-anima-tempo>
     <img src="<?=catch_that_image(1)?>" alt="<?=the_title()?>" />
   </div>
 
