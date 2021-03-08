@@ -10,4 +10,5 @@ import './js/modernizr';
 projetosOutside();
 carrossel();
 animacoes();
+menu();
 gallery();

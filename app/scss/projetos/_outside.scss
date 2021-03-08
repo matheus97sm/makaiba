@@ -9,6 +9,11 @@
   position: relative;
   width: 100%;
   padding-top: 100%;
+  overflow: hidden;
+
+  &:hover img {
+    transform: scale(1.1);
+  }
 
   .projeto-card-dados {
     position: absolute;
@@ -66,6 +71,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s transform ease-out;
   }
 }
 

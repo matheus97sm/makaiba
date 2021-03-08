@@ -8,12 +8,13 @@
 .banner-footer {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 32px;
+  left: 50%;
+  width: 90%;
+  padding: 32px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transform: translate3d(-50%, 0, 0);
   z-index: 9;
 }
 

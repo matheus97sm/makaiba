@@ -38,7 +38,7 @@ if (!is_front_page()) { ?>
       </div>
 
       <div class="midias">
-        <a href="https://instagram.com" target="_blank">
+        <a href="https://instagram.com/makaiba.estudio" target="_blank">
           <svg width="32" height="32" viewBox="0 0 32 32">
             <use xlink:href="#instagram"></use>
           </svg>

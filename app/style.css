@@ -32,7 +32,7 @@ span {
 
 .header-wrapper {
   width: 90%;
-  padding: 32px 0;
+  padding: 24px 0;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -72,14 +72,63 @@ span {
         text-transform: lowercase;
         transition: color 0.2s ease-out; }
 
+.menu-hamb {
+  display: none; }
+
 @media screen and (max-width: 768px) {
   .header-wrapper .logo {
-    width: 120px; }
-  .header-menu .nav-menu {
-    gap: 12px; }
-    .header-menu .nav-menu li::before {
-      width: 8px;
-      height: 8px; } }
+    width: 140px; }
+  .header-menu {
+    position: absolute;
+    width: 100%;
+    padding-top: 100px;
+    right: 0;
+    left: 0;
+    box-sizing: content-box;
+    background-color: #2d2a26;
+    z-index: -1;
+    transform: translate3d(0, -30px, 0);
+    opacity: 0;
+    transition: 0.3s transform, 0.3s opacity;
+    transition-timing-function: ease-out; }
+    .header-menu.ativo {
+      transform: translate3d(0, 0, 0);
+      opacity: 1; }
+    .header-menu .menu-menutopo-container {
+      width: 100%;
+      height: 100%; }
+    .header-menu .nav-menu {
+      width: 100%;
+      height: 100%;
+      justify-content: flex-end;
+      gap: 12px; }
+      .header-menu .nav-menu li::before {
+        width: 8px;
+        height: 8px; }
+  .menu-hamb {
+    display: block;
+    width: 32px;
+    height: 24px;
+    padding: 4px;
+    background-color: transparent;
+    border: none;
+    z-index: 9; }
+    .menu-hamb::before, .menu-hamb::after {
+      content: ''; }
+    .menu-hamb::before, .menu-hamb::after,
+    .menu-hamb span {
+      width: 100%;
+      height: 2px;
+      display: block;
+      background-color: #fff;
+      margin-bottom: 4px;
+      transition: 0.5s transform ease-out; }
+    .menu-hamb.ativo::before {
+      transform: rotate(-45deg) translate3d(-4px, 4px, 0); }
+    .menu-hamb.ativo span {
+      transform: rotate(45deg); }
+    .menu-hamb.ativo::after {
+      transform: scale(0); } }
 
 .banner {
   position: relative;
@@ -90,12 +139,13 @@ span {
 .banner-footer {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 32px;
+  left: 50%;
+  width: 90%;
+  padding: 32px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transform: translate3d(-50%, 0, 0);
   z-index: 9; }
 
 .banner-midias {
@@ -203,15 +253,15 @@ span {
     font-weight: 500;
     font-size: 18px; }
   .banner-item h3 {
-    margin: 0px 0 96px;
+    margin: 0px 0 5vw;
     transform: translate3d(-32px, 0, 0);
     opacity: 0;
     color: #fff;
+    font-size: 4vw;
     font-weight: bold;
-    font-size: 76px;
     text-transform: lowercase; }
   .banner-item a {
-    padding: 6px 24px;
+    padding: 0.3vw 1.1vw 0.5vw;
     display: inline-block;
     background-color: #ffc629;
     border: 2px solid #ffc629;
@@ -219,6 +269,7 @@ span {
     transform: translate3d(-32px, 0, 0);
     opacity: 0;
     font-weight: 500;
+    font-size: 1vw;
     transition: background-color 0.3s, color 0.3s; }
     .banner-item a:hover {
       background-color: transparent;
@@ -260,20 +311,25 @@ span {
     .banner-buttons .dot:hover, .banner-buttons .dot.ativo {
       background-color: #ffc629; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1050px) {
+  .banner-item .line {
+    height: 10vh; }
   .banner-item h3 {
     margin: 0px 0 32px;
-    font-size: 68px; } }
+    font-size: 8.5vh; }
+  .banner-item a {
+    padding: 0.5vh 2vh 0.8vh;
+    font-size: 2.2vh; } }
 
 @keyframes lineDown {
   0% {
     height: 0; }
   100% {
-    height: 96px; } }
+    height: 84px; } }
 
 @keyframes lineUp {
   0% {
-    height: 96px; }
+    height: 84px; }
   50%,
   100% {
     height: 0; } }
@@ -319,7 +375,10 @@ span {
 .projeto-card {
   position: relative;
   width: 100%;
-  padding-top: 100%; }
+  padding-top: 100%;
+  overflow: hidden; }
+  .projeto-card:hover img {
+    transform: scale(1.1); }
   .projeto-card .projeto-card-dados {
     position: absolute;
     top: 0;
@@ -363,7 +422,8 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    transition: 0.5s transform ease-out; }
 
 @media screen and (max-width: 768px) {
   .projeto-outside {
@@ -485,22 +545,26 @@ span {
 
 .projeto-gallery {
   width: 90%;
-  max-width: 1280px;
+  max-width: 1480px;
   margin: 0 auto; }
 
 .projeto-gallery-img {
   position: relative;
   width: 100%;
-  height: 560px;
+  padding-top: 56.25%;
   background-color: #2d2a26; }
+  .projeto-gallery-img:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 0; }
   .projeto-gallery-img.ativo::before, .projeto-gallery-img.ativo::after {
-    opacity: 0.8; }
+    opacity: 1; }
   .projeto-gallery-img::before, .projeto-gallery-img::after {
     position: absolute;
     top: 0;
     width: 10%;
     height: 100%;
-    padding: 0 16px;
+    padding: 0 32px;
     z-index: 9;
     display: flex;
     align-items: center;
@@ -511,13 +575,12 @@ span {
     font-weight: bold;
     cursor: pointer; }
   .projeto-gallery-img::before {
-    content: '';
+    content: '<';
     left: 0;
-    background-image: linear-gradient(to right, #333, #33333300); }
+    justify-content: flex-start; }
   .projeto-gallery-img::after {
-    content: '';
+    content: '>';
     right: 0;
-    background-image: linear-gradient(to left, #333, #33333300);
     justify-content: flex-end; }
 
 .projeto-gallery-img-item {
@@ -552,8 +615,8 @@ span {
     margin: 1.5rem 0; }
 
 @media screen and (max-width: 768px) {
-  .projeto-gallery-img {
-    height: 48vw; }
+  .projeto-gallery {
+    width: 100%; }
   .projeto-gallery-txt-item {
     width: 100%; }
   .projeto-gallery-txt {
@@ -636,7 +699,10 @@ span {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     cursor: pointer; }
+    .projeto-gallery-grid-wrapper .projeto-gallery-grid-item:hover img {
+      transform: scale(1.1); }
     .projeto-gallery-grid-wrapper .projeto-gallery-grid-item:hover::after {
       opacity: 0.3; }
     .projeto-gallery-grid-wrapper .projeto-gallery-grid-item::after {
@@ -652,7 +718,8 @@ span {
     .projeto-gallery-grid-wrapper .projeto-gallery-grid-item img {
       width: 100%;
       height: 100%;
-      object-fit: cover; }
+      object-fit: cover;
+      transition: 0.3s transform ease-out; }
 
 @media screen and (max-width: 768px) {
   .projeto-gallery-grid-wrapper {
@@ -687,6 +754,11 @@ span {
     .projeto-gallery-screen button img {
       width: 16px;
       height: 16px; }
+
+@media screen and (max-width: 768px) {
+  .projeto-gallery-buttons {
+    width: 90%;
+    margin: 16px auto 0; } }
 
 .estudio-banner {
   width: 100%;
@@ -906,7 +978,7 @@ span {
 
 .footer {
   width: 100%;
-  padding: 64px 0; }
+  padding: 38px 0; }
 
 .footer-container {
   width: 90%;

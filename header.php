@@ -57,7 +57,18 @@
   <? } else { ?>
   <style>
   .header {
+    position: relative;
     background-color: #fff;
+  }
+
+  .header-menu {
+    background-color: #fff;
+  }
+
+  .menu-hamb::before,
+  .menu-hamb::after,
+  .menu-hamb span {
+    background-color: #2d2a26;
   }
   </style>
   <? } ?>
@@ -72,8 +83,12 @@
         </a>
       </div>
 
-      <nav class="header-menu">
+      <nav class="header-menu" data-menu="menu">
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'MenuTopo', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
       </nav>
+
+      <button class="menu-hamb" data-menu="button">
+        <span></span>
+      </button>
     </div>
   </header>

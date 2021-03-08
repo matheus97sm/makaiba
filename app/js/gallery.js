@@ -70,6 +70,8 @@ export default function gallery() {
       setClass(galleryImgArray, atual);
       setClass(galleryTextArray, atual);
       counter.innerText = `${atual + 1}/${galleryImgArray.length}`;
+
+      galleryImg.requestFullscreen();
     });
   });
 
@@ -90,7 +92,7 @@ export default function gallery() {
   galleryImg.addEventListener('click', e => {
     e.preventDefault();
 
-    if (e.offsetX / galleryImg.clientWidth < 0.1) {
+    if (e.offsetX / galleryImg.clientWidth < 0.2) {
       if (atual === 0)
         atual = galleryImgArray.length - 1;
       else
@@ -101,11 +103,35 @@ export default function gallery() {
       counter.innerText = `${atual + 1}/${galleryImgArray.length}`;
     }
     
-    if (e.offsetX / galleryImg.clientWidth > 0.9) {
+    if (e.offsetX / galleryImg.clientWidth > 0.8) {
       if (atual === galleryImgArray.length - 1)
         atual = 0;
       else
         atual++;  
+
+      setClass(galleryImgArray, atual);
+      setClass(galleryTextArray, atual);
+      counter.innerText = `${atual + 1}/${galleryImgArray.length}`;
+    }
+  });
+
+  window.addEventListener('keydown', e => {
+    if (e.key === "ArrowLeft") {
+      if (atual === 0)
+        atual = galleryImgArray.length - 1;
+      else
+        atual--;
+
+      setClass(galleryImgArray, atual);
+      setClass(galleryTextArray, atual);
+      counter.innerText = `${atual + 1}/${galleryImgArray.length}`;
+    }
+
+    if (e.key === "ArrowRight") {
+      if (atual === galleryImgArray.length - 1)
+        atual = 0;
+      else
+        atual++;
 
       setClass(galleryImgArray, atual);
       setClass(galleryTextArray, atual);
