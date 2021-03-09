@@ -11,8 +11,8 @@ export default function gallery() {
   const buttonFullscreen = document.querySelector('.projeto-gallery-button-full');
   const buttonGridClose = document.querySelector('.projeto-gallery-grid-close');
   let atual = 0;
-  let touchStart = 0;
-  let touchEnd = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   if (galleryImgArray.length === 0) return null;
 
@@ -143,16 +143,16 @@ export default function gallery() {
 
   galleryImg.addEventListener('touchstart', e => {
     if (e.touches.length === 1) {
-      touchStart = e.touches[0].clientX;
+      touchStartX = e.touches[0].clientX;
     }
   });
 
   galleryImg.addEventListener('touchend', e => {
     if (e.changedTouches.length === 1) {
-      touchEnd = e.changedTouches[0].clientX;
+      touchEndX = e.changedTouches[0].clientX;
     }
 
-    if (touchStart < touchEnd) {
+    if (touchStartX < touchEndX) {
       if (atual === galleryImgArray.length - 1)
         atual = 0;
       else
@@ -163,7 +163,7 @@ export default function gallery() {
       counter.innerText = `${atual + 1}/${galleryImgArray.length}`;
     }
 
-    if (touchStart > touchEnd) {
+    if (touchStartX > touchEndX) {
       if (atual === 0)
         atual = galleryImgArray.length - 1;
       else
