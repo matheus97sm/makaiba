@@ -91,7 +91,8 @@ span {
     z-index: -1;
     transform: translate3d(0, -30px, 0);
     opacity: 0;
-    transition: 0.3s transform, 0.3s opacity;
+    visibility: hidden;
+    transition: 0.3s transform, 0.3s opacity, 0.3s visibility;
     transition-timing-function: ease-out; }
     .header-menu.ativo {
       transform: translate3d(0, 0, 0);
