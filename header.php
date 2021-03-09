@@ -58,11 +58,11 @@
   <style>
   .header {
     position: relative;
-    background-color: #fff;
+    background-color: #ffffffee;
   }
 
   .header-menu {
-    background-color: #fff;
+    background-color: #ffffffee;
   }
 
   .menu-hamb::before,

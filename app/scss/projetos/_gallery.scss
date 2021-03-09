@@ -38,6 +38,7 @@
     color: #fff;
     font-size: 32px;
     font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
   }
 
@@ -107,6 +108,10 @@
 
   .projeto-gallery-txt {
     padding: 64px 0 64px 32px;
+  }
+
+  .projeto-gallery-img {
+    padding-top: 75%;
   }
 }
 
