@@ -97,6 +97,7 @@
     &.ativo {
       transform: translate3d(0, 0, 0);
       opacity: 1;
+      visibility: visible;
     }
 
     .menu-menutopo-container {
