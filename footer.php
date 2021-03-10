@@ -44,7 +44,7 @@ if (!is_front_page()) { ?>
           </svg>
         </a>
 
-        <a href="https://linkedin.com" target="_blank">
+        <a href="https://linkedin.com/in/makaíba-estúdio" target="_blank">
           <svg width="32" height="32" viewBox="0 0 32 32">
             <use xlink:href="#linkedin"></use>
           </svg>
