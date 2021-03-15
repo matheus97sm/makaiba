@@ -152,7 +152,7 @@ export default function gallery() {
       touchEndX = e.changedTouches[0].clientX;
     }
 
-    if (touchStartX < touchEndX) {
+    if (touchStartX > touchEndX) {
       if (atual === galleryImgArray.length - 1)
         atual = 0;
       else
@@ -163,7 +163,7 @@ export default function gallery() {
       counter.innerText = `${atual + 1}/${galleryImgArray.length}`;
     }
 
-    if (touchStartX > touchEndX) {
+    if (touchStartX < touchEndX) {
       if (atual === 0)
         atual = galleryImgArray.length - 1;
       else

@@ -22,7 +22,7 @@ if (!is_front_page()) { ?>
 
       <div>
         <span>arquitetura e urbanismo</span>
-        <span>Copyright © 2020 | All rights reserved</span>
+        <span>Copyright © <p class="copyright-year"></p> | All rights reserved</span>
       </div>
     </div>
 

@@ -1,5 +1,5 @@
 .projeto-gallery {
-  width: 90%;
+  width: 85%;
   max-width: 1480px;
   margin: 0 auto;
 }
@@ -79,7 +79,7 @@
 }
 
 .projeto-gallery-txt {
-  padding: 128px;
+  padding: 64px 128px 128px;
   display: flex;
   justify-content: flex-end;
 }
@@ -111,7 +111,7 @@
   }
 
   .projeto-gallery-img {
-    padding-top: 75%;
+    padding-top: 56.25%;
   }
 }
 

@@ -1,7 +1,7 @@
 import './style.scss';
 import animacoes from './js/animacoes';
 import menu from './js/menu';
-import modal from './js/modal';
+import copyright from './js/copyright';
 import projetosOutside from './js/projetosOutside';
 import carrossel from './js/carrossel';
 import gallery from './js/gallery';
@@ -11,4 +11,5 @@ projetosOutside();
 carrossel();
 animacoes();
 menu();
+copyright();
 gallery();
