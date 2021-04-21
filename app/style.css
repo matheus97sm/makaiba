@@ -421,7 +421,7 @@ span {
       color: #fff;
       font-weight: bold;
       font-size: 3.5vw;
-      line-height: 4.3vw;
+      line-height: 3.5vw;
       text-transform: lowercase; }
   .projeto-card img {
     position: absolute;
@@ -441,7 +441,7 @@ span {
   .projeto-card .projeto-card-dados h3 {
     margin: -4px 0 8px;
     font-size: 36px;
-    line-height: 42px; }
+    line-height: 36px; }
   .projeto-card img {
     position: absolute;
     top: 0;

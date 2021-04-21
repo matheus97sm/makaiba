@@ -12,7 +12,12 @@ get_header(); ?>
   <div class="banner-wrapper">
     <div class="banner-filter"></div>
 
-    <?php query_posts( array( 'post_type' => 'projeto', 'posts_per_page' => '5' ) );  ?>
+    <?php query_posts( array( 
+      'post_type' => 'projeto', 
+      'posts_per_page' => '5',
+      'meta_key' => 'destaque',
+      'meta_value' => true
+    ) );  ?>
     <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
 
