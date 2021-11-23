@@ -49,6 +49,12 @@ if (!is_front_page()) { ?>
             <use xlink:href="#linkedin"></use>
           </svg>
         </a>
+        
+        <a href="https://api.whatsapp.com/send?phone=553183818141&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20a%20respeito%20dos%20servi%C3%A7os%20da%20Maka%C3%ADba!" target="_blank">
+          <svg width="32" height="32" viewBox="0 0 32 32">
+            <use xlink:href="#whatsapp"></use>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
