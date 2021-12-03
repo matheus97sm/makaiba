@@ -44,17 +44,7 @@ get_header(); ?>
     <div class="banner-buttons"></div>
 
     <div class="banner-midias">
-      <a href="https://instagram.com/makaiba.estudio" target="_blank">
-        <svg width="32" height="32" viewBox="0 0 32 32">
-          <use xlink:href="#instagram"></use>
-        </svg>
-      </a>
 
-      <a href="https://linkedin.com/in/makaíba-estúdio" target="_blank">
-        <svg width="32" height="32" viewBox="0 0 32 32">
-          <use xlink:href="#linkedin"></use>
-        </svg>
-      </a>
     </div>
   </div>
 </section>
